@@ -135,8 +135,18 @@ case "$1" in    # case in shell scripting
 esac
 comment
 
+<<comment
 variable=my_file
 echo $variable
 echo ${variable}
 new_variable=${variable}_$(date '+%Y-%m-%d_%H-%M-%S')
 echo $new_variable
+comment
+
+# Adding two numbers
+<<comment
+var1=7
+var2=23
+echo "Sum of two numbers : $((var1+var2))"
+echo "Sum of two numbers : $(($1+$2))"
+comment
