@@ -150,3 +150,18 @@ var2=23
 echo "Sum of two numbers : $((var1+var2))"
 echo "Sum of two numbers : $(($1+$2))"
 comment
+
+# Wildcards
+<<comment
+ls
+# a.txt a1.txt a2.txt a3.txt a4.txt a5.txt
+
+ls a*.txt
+# a.txt a1.txt a2.txt a3.txt a4.txt a5.txt
+
+ls a?.txt
+# a1.txt a2.txt a3.txt a4.txt a5.txt
+
+ls a[2-4].txt
+# a2.txt a3.txt a4.txt
+comment
